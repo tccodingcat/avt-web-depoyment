@@ -1,0 +1,187 @@
+---
+import Layout from '../Layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+    <style>
+        /* 水平滾動容器 */
+        .horizontal-scroll {
+            display: flex;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            gap: 1.5rem;
+            padding: 1rem 0.5rem 2rem 0.5rem;
+            scroll-behavior: smooth;
+            cursor: grab;
+            width: 100%;
+            -webkit-overflow-scrolling: touch;
+        }
+        .horizontal-scroll:active { cursor: grabbing; }
+        .horizontal-scroll::-webkit-scrollbar { height: 6px; }
+        .horizontal-scroll::-webkit-scrollbar-track { background: #e5e5e5; border-radius: 10px; }
+        .horizontal-scroll::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+        .scroll-img {
+            flex: 0 0 320px;
+            scroll-snap-align: start;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px -10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .scroll-img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 35px -15px rgba(0,0,0,0.2);
+        }
+        .scroll-img img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            display: block;
+        }
+        .scroll-img:hover img { transform: scale(1.05); }
+        @media (max-width: 768px) {
+            .scroll-img { flex: 0 0 280px; }
+            .scroll-img img { height: 260px; }
+        }
+    </style>
+<Layout>
+    <Navbar />
+<!-- Hero 區塊 -->
+<section class="relative min-h-[40vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+    <div class="hero-bg grid-bg">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div class="data-stream" style="left: 15%; animation-delay: 0s;"></div>
+        <div class="data-stream" style="left: 85%; animation-delay: 1.5s;"></div>
+        <div class="absolute top-20 left-10 w-32 h-32 border border-cyan-400/20 rounded-full"></div>
+        <div class="absolute bottom-40 right-20 w-24 h-24 border border-purple-400/20 rotate-45"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto">
+        <div class="fade-item">
+            <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 border-b border-cyan-400/50 pb-1" data-i18n="hero_badge">人機互動 · 情感陪伴</span>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-neutral-900 leading-[1.1] mt-6 mb-6 glow-text tech-font" data-i18n="hero_title">十二星座系列</h1>
+            <p class="text-neutral-600 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed" data-i18n="hero_subtitle">情感陪伴互動機器人，以交流互動連接AI進行對話</p>
+        </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"><div class="w-[2px] h-12 bg-gradient-to-b from-cyan-400 to-transparent mx-auto"></div></div>
+</section>
+
+<!-- 產品概述區塊 -->
+<section class="py-24 px-6 md:px-12 bg-white/30">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="fade-item">
+                <span class="text-sm font-mono text-neutral-500 tracking-wider" data-i18n="intro_label">人機互動 · 情感陪伴</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-4 mb-6 text-neutral-900 tech-font" data-i18n="intro_title">十二星座情感陪伴互動機器人</h2>
+                <p class="text-neutral-600 leading-relaxed mb-6" data-i18n="intro_text1">十二星座系列情感陪伴互動機器人，專為現代人設計的智能伴侶。每個星座對應獨特的個性設定，透過先進的AI對話技術，提供真實的情感交流與互動體驗。</p>
+                <p class="text-neutral-600 leading-relaxed" data-i18n="intro_text2">無論是日常聊天、情感支持，還是知識問答，我們的機器人都能與您進行自然流暢的對話，成為您生活中最貼心的夥伴。</p>
+            </div>
+            <div class="fade-item" style="transition-delay:0.1s">
+                <div class="horizontal-scroll">
+                    <div class="scroll-img"><img src="/images/zodiac-aries.jpg" alt="牡羊座機器人" onerror="this.src='https://placehold.co/400x500/e9e6e2/8b7355?text=Aries'"></div>
+                    <div class="scroll-img"><img src="/images/zodiac-taurus.jpg" alt="金牛座機器人" onerror="this.src='https://placehold.co/400x500/e9e6e2/8b7355?text=Taurus'"></div>
+                    <div class="scroll-img"><img src="/images/zodiac-gemini.jpg" alt="雙子座機器人" onerror="this.src='https://placehold.co/400x500/e9e6e2/8b7355?text=Gemini'"></div>
+                    <div class="scroll-img"><img src="/images/zodiac-cancer.jpg" alt="巨蟹座機器人" onerror="this.src='https://placehold.co/400x500/e9e6e2/8b7355?text=Cancer'"></div>
+                    <div class="scroll-img"><img src="/images/zodiac-leo.jpg" alt="獅子座機器人" onerror="this.src='https://placehold.co/400x500/e9e6e2/8b7355?text=Leo'"></div>
+                    <div class="scroll-img"><img src="/images/zodiac-virgo.jpg" alt="處女座機器人" onerror="this.src='https://placehold.co/400x500/e9e6e2/8b7355?text=Virgo'"></div>
+                </div>
+                <div class="text-center mt-4"><p class="text-xs text-neutral-400 flex items-center justify-center gap-2"><i class="fas fa-arrow-left text-xs"></i> <span data-i18n="scroll_hint">左右滑動瀏覽十二星座</span> <i class="fas fa-arrow-right text-xs"></i></p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 核心功能區塊 -->
+<section class="py-24 px-6 md:px-12 bg-white/40">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <div class="fade-item">
+                <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 border-b border-cyan-400/50 pb-1" data-i18n="features_badge">核心功能</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-6 text-neutral-900 tech-font" data-i18n="features_title">智能對話 · 情感陪伴</h2>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="fade-item bg-white rounded-2xl p-6 text-center feature-card neon-border tech-card-hover flow-border">
+                <div class="w-16 h-16 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-comments text-2xl text-cyan-600"></i></div>
+                <h3 class="font-serif text-xl mb-2" data-i18n="feat1_title">AI對話引擎</h3>
+                <p class="text-neutral-500 text-sm" data-i18n="feat1_desc">自然語言處理技術，實現流暢的人機對話</p>
+            </div>
+            <div class="fade-item bg-white rounded-2xl p-6 text-center feature-card neon-border tech-card-hover flow-border" style="transition-delay:0.1s">
+                <div class="w-16 h-16 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-star text-2xl text-cyan-600"></i></div>
+                <h3 class="font-serif text-xl mb-2" data-i18n="feat2_title">星座個性化</h3>
+                <p class="text-neutral-500 text-sm" data-i18n="feat2_desc">十二星座專屬性格設定，打造獨特互動體驗</p>
+            </div>
+            <div class="fade-item bg-white rounded-2xl p-6 text-center feature-card neon-border tech-card-hover flow-border" style="transition-delay:0.2s">
+                <div class="w-16 h-16 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-heart text-2xl text-cyan-600"></i></div>
+                <h3 class="font-serif text-xl mb-2" data-i18n="feat3_title">情感識別</h3>
+                <p class="text-neutral-500 text-sm" data-i18n="feat3_desc">智能分析用戶情緒，提供貼心回應與支持</p>
+            </div>
+            <div class="fade-item bg-white rounded-2xl p-6 text-center feature-card neon-border tech-card-hover flow-border" style="transition-delay:0.3s">
+                <div class="w-16 h-16 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-brain text-2xl text-cyan-600"></i></div>
+                <h3 class="font-serif text-xl mb-2" data-i18n="feat4_title">持續學習</h3>
+                <p class="text-neutral-500 text-sm" data-i18n="feat4_desc">記錄對話習慣，愈來愈懂你的需求</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 應用場景區塊 - 文字概述（無圖片） -->
+<section class="py-24 px-6 md:px-12 bg-white/30">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <div class="fade-item">
+                <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 border-b border-cyan-400/50 pb-1" data-i18n="scenes_badge">應用場景</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-6 text-neutral-900 tech-font" data-i18n="scenes_title">多元場景應用</h2>
+                <p class="text-neutral-500 max-w-2xl mx-auto mt-5" data-i18n="scenes_subtitle">情感陪伴機器人，溫暖每個時刻</p>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="fade-item text-center p-8 bg-white rounded-2xl shadow-sm neon-border tech-card-hover">
+                <div class="w-16 h-16 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-home text-2xl text-cyan-600"></i></div>
+                <h3 class="font-serif text-xl mb-2" data-i18n="scene1_title">居家陪伴</h3>
+                <p class="text-neutral-500 text-sm" data-i18n="scene1_desc">為獨居者提供日常對話與情感支持，減輕孤獨感</p>
+            </div>
+            <div class="fade-item text-center p-8 bg-white rounded-2xl shadow-sm neon-border tech-card-hover" style="transition-delay:0.1s">
+                <div class="w-16 h-16 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-child text-2xl text-cyan-600"></i></div>
+                <h3 class="font-serif text-xl mb-2" data-i18n="scene2_title">兒童教育</h3>
+                <p class="text-neutral-500 text-sm" data-i18n="scene2_desc">寓教於樂，陪伴孩子學習成長，啟發創造力</p>
+            </div>
+            <div class="fade-item text-center p-8 bg-white rounded-2xl shadow-sm neon-border tech-card-hover" style="transition-delay:0.2s">
+                <div class="w-16 h-16 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-hospital-user text-2xl text-cyan-600"></i></div>
+                <h3 class="font-serif text-xl mb-2" data-i18n="scene3_title">長者照護</h3>
+                <p class="text-neutral-500 text-sm" data-i18n="scene3_desc">陪伴長者聊天互動，提供心理慰藉與關懷</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA 區塊 -->
+<section class="py-20 px-6 md:px-12 bg-neutral-900 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+        <div class="fade-item">
+            <h2 class="font-serif text-3xl md:text-4xl mb-4" data-i18n="cta_title">找到屬於您的星座夥伴</h2>
+            <p class="text-neutral-300 mb-8" data-i18n="cta_desc">立即預約體驗，讓AI機器人成為您生活中的貼心伴侶</p>
+            <a href="/contact" class="inline-block bg-white text-black px-8 py-3 rounded-full text-sm font-semibold hover:bg-neutral-200 transition-all duration-300 clickable neon-btn" data-i18n="cta_btn">預約體驗 →</a>
+        </div>
+    </div>
+</section>
+    <Footer />
+</Layout>
+<script type="module" src="/translation/pages/hmi.js"></script>
+<script is:inline>
+const fadeObserver = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); fadeObserver.unobserve(e.target); } }), { threshold: 0.2 });
+document.querySelectorAll('.fade-item').forEach(el => fadeObserver.observe(el));
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') { 
+    gsap.registerPlugin(ScrollTrigger); 
+    gsap.utils.toArray('section').forEach(section => { 
+        gsap.fromTo(section.querySelectorAll('.fade-item'), 
+            { opacity: 0, y: 50 }, 
+            { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, scrollTrigger: { trigger: section, start: "top 80%", end: "bottom 20%", toggleActions: "play none none reverse" } }
+        ); 
+    }); 
+}
+
+</script>

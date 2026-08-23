@@ -1,0 +1,201 @@
+---
+import Layout from '../Layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout>
+    <Navbar />
+    <!-- Hero 區塊 -->
+<section class="relative min-h-[40vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+    <div class="hero-bg grid-bg">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div class="data-stream" style="left: 15%; animation-delay: 0s;"></div>
+        <div class="data-stream" style="left: 85%; animation-delay: 1.5s;"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto">
+        <div class="fade-item">
+            <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 border-b border-cyan-400/50 pb-1" data-i18n="hero_badge">視覺AI · 智能感知</span>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-neutral-900 leading-[1.1] mt-6 mb-6 glow-text tech-font" data-i18n="hero_title">AI 視覺解決方案</h1>
+            <p class="text-neutral-600 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed" data-i18n="hero_subtitle">人臉識別、智能考勤、物體追蹤等視覺AI應用，賦能智慧場景</p>
+        </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"><div class="w-[2px] h-12 bg-gradient-to-b from-cyan-400 to-transparent mx-auto"></div></div>
+</section>
+
+<!-- 產品一：人工智能攝像頭解決方案 -->
+<section class="py-24 px-6 md:px-12 bg-white/30">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-start">
+            <div class="fade-item">
+                <span class="text-sm font-mono text-neutral-500 tracking-wider" data-i18n="product1_label">視覺AI解決方案</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-4 mb-6 text-neutral-900 tech-font" data-i18n="product1_title">人工智能攝像頭解決方案</h2>
+                <p class="text-neutral-600 leading-relaxed mb-6" data-i18n="product1_text1">結合先進的深度學習算法，提供高精度人臉識別、智能考勤、多人追蹤等視覺AI功能。適用於企業、學校、零售等多元場景。</p>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-cyan-600 text-sm"></i><span class="text-neutral-600" data-i18n="product1_feat1">人臉識別 - 99.8% 識別準確率</span></li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-cyan-600 text-sm"></i><span class="text-neutral-600" data-i18n="product1_feat2">智能考勤 - 無接觸打卡</span></li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-cyan-600 text-sm"></i><span class="text-neutral-600" data-i18n="product1_feat3">多人追蹤 - 即時軌跡分析</span></li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-cyan-600 text-sm"></i><span class="text-neutral-600" data-i18n="product1_feat4">邊緣計算 - 本地處理保護隱私</span></li>
+                </ul>
+                <p class="text-neutral-600 leading-relaxed" data-i18n="product1_text2">支援多種硬體平台，可靈活部署於現有監控系統，輕鬆升級為智能視覺解決方案。</p>
+            </div>
+            <div class="fade-item" style="transition-delay:0.1s">
+                <div class="horizontal-scroll">
+                    <div class="scroll-img"><img src="/images/AI1.jpg" alt="AI Vision 1" onerror="this.src='https://picsum.photos/id/1/400/500'"></div>
+                    <div class="scroll-img"><img src="/images/AI2.jpg" alt="AI Vision 2" onerror="this.src='https://picsum.photos/id/20/400/500'"></div>
+                    <div class="scroll-img"><img src="/images/AI3.jpg" alt="AI Vision 3" onerror="this.src='https://picsum.photos/id/30/400/500'"></div>
+                    <div class="scroll-img"><img src="/images/AI4.jpg" alt="AI Vision 4" onerror="this.src='https://picsum.photos/id/40/400/500'"></div>
+                </div>
+                <div class="text-center mt-4"><p class="text-xs text-neutral-400 flex items-center justify-center gap-2"><i class="fas fa-arrow-left text-xs"></i> <span data-i18n="scroll_hint1">左右滑動瀏覽</span> <i class="fas fa-arrow-right text-xs"></i></p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 產品二：智慧監護 -->
+<section class="py-24 px-6 md:px-12 bg-white/40">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-start">
+            <div class="fade-item order-2 md:order-1">
+                <div class="horizontal-scroll">
+                    <div class="scroll-img"><img src="/images/AI5.jpg" alt="Smart Care 1" onerror="this.src='https://picsum.photos/id/2/400/500'"></div>
+                    <div class="scroll-img"><img src="/images/AI6.jpg" alt="Smart Care 2" onerror="this.src='https://picsum.photos/id/15/400/500'"></div>
+                    <div class="scroll-img"><img src="/images/AI7.jpg" alt="Smart Care 3" onerror="this.src='https://picsum.photos/id/25/400/500'"></div>
+                    <div class="scroll-img"><img src="/images/AI8.jpg" alt="Smart Care 4" onerror="this.src='https://picsum.photos/id/35/400/500'"></div>
+                </div>
+                <div class="text-center mt-4"><p class="text-xs text-neutral-400 flex items-center justify-center gap-2"><i class="fas fa-arrow-left text-xs"></i> <span data-i18n="scroll_hint2">左右滑動瀏覽</span> <i class="fas fa-arrow-right text-xs"></i></p></div>
+            </div>
+            <div class="fade-item order-1 md:order-2" style="transition-delay:0.1s">
+                <span class="text-sm font-mono text-neutral-500 tracking-wider" data-i18n="product2_label">隱私優先 · 全天候守護</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-4 mb-6 text-neutral-900 tech-font" data-i18n="product2_title">智慧監護</h2>
+                <p class="text-neutral-600 leading-relaxed mb-6" data-i18n="product2_text1">以AI驅動的隱私保護監控系統，為長者提供全天候安全守護。該系統分析人類活動並在緊急情況下迅速發送警報，是照顧老年人的優秀工具，尤其適用於獨居者。</p>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-cyan-600 text-sm"></i><span class="text-neutral-600" data-i18n="product2_feat1">隱私保護 - 僅提取人體骨骼</span></li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-cyan-600 text-sm"></i><span class="text-neutral-600" data-i18n="product2_feat2">AI跌倒檢測 - 即時識別</span></li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-cyan-600 text-sm"></i><span class="text-neutral-600" data-i18n="product2_feat3">24小時客服中心 - 雙向語音</span></li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-cyan-600 text-sm"></i><span class="text-neutral-600" data-i18n="product2_feat4">實時骨骼串流 - 視覺化呈現</span></li>
+                </ul>
+                <p class="text-neutral-600 leading-relaxed" data-i18n="product2_text2">與傳統攝像頭不同，我們的系統僅發送合成的人骨骼動畫，從而在整個過程中確保隱私保護。您可以看到活動軌跡，卻看不到任何可識別的影像。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 產品特點區塊 -->
+<section class="py-24 px-6 md:px-12 bg-white/30">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <div class="fade-item"><span class="text-xs font-mono uppercase tracking-wider text-neutral-500 border-b border-cyan-400/50 pb-1" data-i18n="features_badge">核心功能</span><h2 class="font-serif text-4xl md:text-5xl mt-6 text-neutral-900 tech-font" data-i18n="features_title">AI 視覺核心能力</h2><p class="text-neutral-500 max-w-2xl mx-auto mt-5" data-i18n="features_subtitle">人臉識別、物體追蹤、行為分析一站式解決方案</p></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="fade-item bg-white rounded-2xl p-6 text-center feature-card neon-border tech-card-hover flow-border"><div class="w-16 h-16 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-face-smile text-2xl text-cyan-600"></i></div><h3 class="font-serif text-xl mb-2" data-i18n="feat1_title">人臉識別</h3><p class="text-neutral-500 text-sm" data-i18n="feat1_desc">高精度人臉比對，支援戴口罩識別</p></div>
+            <div class="fade-item bg-white rounded-2xl p-6 text-center feature-card neon-border tech-card-hover flow-border" style="transition-delay:0.05s"><div class="w-16 h-16 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-fingerprint text-2xl text-cyan-600"></i></div><h3 class="font-serif text-xl mb-2" data-i18n="feat2_title">智能考勤</h3><p class="text-neutral-500 text-sm" data-i18n="feat2_desc">無接觸打卡，自動生成考勤報表</p></div>
+            <div class="fade-item bg-white rounded-2xl p-6 text-center feature-card neon-border tech-card-hover flow-border" style="transition-delay:0.1s"><div class="w-16 h-16 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-location-dot text-2xl text-cyan-600"></i></div><h3 class="font-serif text-xl mb-2" data-i18n="feat3_title">多人追蹤</h3><p class="text-neutral-500 text-sm" data-i18n="feat3_desc">即時軌跡分析，支援多目標同時追蹤</p></div>
+            <div class="fade-item bg-white rounded-2xl p-6 text-center feature-card neon-border tech-card-hover flow-border" style="transition-delay:0.15s"><div class="w-16 h-16 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-chart-line text-2xl text-cyan-600"></i></div><h3 class="font-serif text-xl mb-2" data-i18n="feat4_title">行為分析</h3><p class="text-neutral-500 text-sm" data-i18n="feat4_desc">識別日常活動模式，發現異常行為變化</p></div>
+            <div class="fade-item bg-white rounded-2xl p-6 text-center feature-card neon-border tech-card-hover flow-border" style="transition-delay:0.2s"><div class="w-16 h-16 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-person-falling text-2xl text-cyan-600"></i></div><h3 class="font-serif text-xl mb-2" data-i18n="feat5_title">跌倒檢測</h3><p class="text-neutral-500 text-sm" data-i18n="feat5_desc">即時識別跌倒行為，第一時間發出警報</p></div>
+            <div class="fade-item bg-white rounded-2xl p-6 text-center feature-card neon-border tech-card-hover flow-border" style="transition-delay:0.25s"><div class="w-16 h-16 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-hand-peace text-2xl text-cyan-600"></i></div><h3 class="font-serif text-xl mb-2" data-i18n="feat6_title">手勢檢測</h3><p class="text-neutral-500 text-sm" data-i18n="feat6_desc">識別揮手等手勢動作，支援無接觸互動</p></div>
+            <div class="fade-item bg-white rounded-2xl p-6 text-center feature-card neon-border tech-card-hover flow-border" style="transition-delay:0.3s"><div class="w-16 h-16 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-headset text-2xl text-cyan-600"></i></div><h3 class="font-serif text-xl mb-2" data-i18n="feat7_title">24小時客服</h3><p class="text-neutral-500 text-sm" data-i18n="feat7_desc">警報觸發後提供雙向語音通訊，即時回應</p></div>
+            <div class="fade-item bg-white rounded-2xl p-6 text-center feature-card neon-border tech-card-hover flow-border" style="transition-delay:0.35s"><div class="w-16 h-16 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-brain text-2xl text-cyan-600"></i></div><h3 class="font-serif text-xl mb-2" data-i18n="feat8_title">AI預防分析</h3><p class="text-neutral-500 text-sm" data-i18n="feat8_desc">透過行為模式學習，預測潛在風險並提前預警</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- 數據統計區塊 -->
+<section class="py-24 px-6 md:px-12 bg-white/40">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="fade-item text-center p-8 bg-white rounded-2xl shadow-sm neon-border"><div class="stat-number text-4xl md:text-5xl font-serif text-neutral-900 mb-2">99.8%</div><p class="text-neutral-500" data-i18n="stat1">人臉識別準確率</p></div>
+            <div class="fade-item text-center p-8 bg-white rounded-2xl shadow-sm neon-border" style="transition-delay:0.1s"><div class="stat-number text-4xl md:text-5xl font-serif text-neutral-900 mb-2">&lt;50ms</div><p class="text-neutral-500" data-i18n="stat2">識別響應時間</p></div>
+            <div class="fade-item text-center p-8 bg-white rounded-2xl shadow-sm neon-border" style="transition-delay:0.2s"><div class="stat-number text-4xl md:text-5xl font-serif text-neutral-900 mb-2">99%</div><p class="text-neutral-500" data-i18n="stat3">跌倒檢測準確率</p></div>
+            <div class="fade-item text-center p-8 bg-white rounded-2xl shadow-sm neon-border" style="transition-delay:0.3s"><div class="stat-number text-4xl md:text-5xl font-serif text-neutral-900 mb-2">24/7</div><p class="text-neutral-500" data-i18n="stat4">全天候守護</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- 技術架構區塊 -->
+<section class="py-24 px-6 md:px-12 bg-white/30">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <div class="fade-item"><span class="text-xs font-mono uppercase tracking-wider text-neutral-500 border-b border-cyan-400/50 pb-1" data-i18n="tech_badge">技術架構</span><h2 class="font-serif text-4xl md:text-5xl mt-6 text-neutral-900 tech-font" data-i18n="tech_title">先進AI引擎</h2><p class="text-neutral-500 max-w-2xl mx-auto mt-5" data-i18n="tech_subtitle">結合深度學習與邊緣運算，實現即時精準分析</p></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="fade-item text-center p-8 bg-white rounded-2xl shadow-sm neon-border tech-card-hover"><i class="fas fa-microchip text-3xl text-cyan-600 mb-3"></i><h3 class="font-serif text-xl mb-2" data-i18n="tech1_title">邊緣計算</h3><p class="text-neutral-500 text-sm" data-i18n="tech1_desc">本地處理影像數據，保護隱私同時降低延遲，實現毫秒級響應。</p></div>
+            <div class="fade-item text-center p-8 bg-white rounded-2xl shadow-sm neon-border tech-card-hover" style="transition-delay:0.1s"><i class="fas fa-brain text-3xl text-cyan-600 mb-3"></i><h3 class="font-serif text-xl mb-2" data-i18n="tech2_title">深度學習模型</h3><p class="text-neutral-500 text-sm" data-i18n="tech2_desc">持續優化的人臉識別與行為分析算法，準確率高達99.8%。</p></div>
+            <div class="fade-item text-center p-8 bg-white rounded-2xl shadow-sm neon-border tech-card-hover" style="transition-delay:0.2s"><i class="fas fa-cloud text-3xl text-cyan-600 mb-3"></i><h3 class="font-serif text-xl mb-2" data-i18n="tech3_title">雲端整合</h3><p class="text-neutral-500 text-sm" data-i18n="tech3_desc">安全加密的數據傳輸與遠程監控平台，隨時掌握狀況。</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA 區塊 -->
+<section class="py-20 px-6 md:px-12 bg-neutral-900 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+        <div class="fade-item">
+            <h2 class="font-serif text-3xl md:text-4xl mb-4" data-i18n="cta_title">開啟智慧視覺新時代</h2>
+            <p class="text-neutral-300 mb-8" data-i18n="cta_desc">立即預約演示，體驗AI視覺解決方案如何提升效率與安全</p>
+            <a href="/contact" class="inline-block bg-white text-black px-8 py-3 rounded-full text-sm font-semibold hover:bg-neutral-200 transition-all duration-300 clickable neon-btn" data-i18n="cta_btn">預約演示 →</a>
+        </div>
+    </div>
+</section>
+<Footer />
+</Layout>
+    <style>
+        /* 水平滾動容器 */
+        .horizontal-scroll {
+            display: flex;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            gap: 1.5rem;
+            padding: 1rem 0.5rem 2rem 0.5rem;
+            scroll-behavior: smooth;
+            cursor: grab;
+            width: 100%;
+            -webkit-overflow-scrolling: touch;
+        }
+        .horizontal-scroll:active { cursor: grabbing; }
+        .horizontal-scroll::-webkit-scrollbar { height: 6px; }
+        .horizontal-scroll::-webkit-scrollbar-track { background: #e5e5e5; border-radius: 10px; }
+        .horizontal-scroll::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+        .scroll-img {
+            flex: 0 0 320px;
+            scroll-snap-align: start;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px -10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .scroll-img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 35px -15px rgba(0,0,0,0.2);
+        }
+        .scroll-img img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            display: block;
+        }
+        .scroll-img:hover img { transform: scale(1.05); }
+        @media (max-width: 768px) {
+            .scroll-img { flex: 0 0 280px; }
+            .scroll-img img { height: 260px; }
+        }
+    </style>
+<script type="module" src="/translation/pages/smartcare.js"></script>
+<script is:inline>
+const fadeObserver = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); fadeObserver.unobserve(e.target); } }), { threshold: 0.2 });
+document.querySelectorAll('.fade-item').forEach(el => fadeObserver.observe(el));
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') { 
+    gsap.registerPlugin(ScrollTrigger); 
+    gsap.utils.toArray('section').forEach(section => { 
+        gsap.fromTo(section.querySelectorAll('.fade-item'), 
+            { opacity: 0, y: 50 }, 
+            { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, scrollTrigger: { trigger: section, start: "top 80%", end: "bottom 20%", toggleActions: "play none none reverse" } }
+        ); 
+    }); 
+}
+
+</script>
+</body>
+</html>

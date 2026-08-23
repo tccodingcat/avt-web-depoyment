@@ -1,0 +1,38 @@
+---
+import Layout from '../Layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/mainpagecomponents/Hero.astro';
+import Products from '../components/mainpagecomponents/Products.astro';
+import TechSkeleton from '../components/mainpagecomponents/TechSkeleton.astro';
+import Highlights from '../components/mainpagecomponents/Highlight.astro';
+import ContactCTA from '../components/mainpagecomponents/ContactCTA.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Alpha Vision | 智慧感知科技">
+    <Navbar />
+    <main>
+        <Hero />
+        <Products />
+        <TechSkeleton />
+        <Highlights />
+        <ContactCTA />
+    </main>
+    <Footer />
+</Layout>
+
+<script type="module" src="/translation/pages/index.js"></script>
+<script is:inline>
+const fadeObserver = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); fadeObserver.unobserve(e.target); } }), { threshold: 0.2 });
+document.querySelectorAll('.fade-item').forEach(el => fadeObserver.observe(el));
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') { 
+    gsap.registerPlugin(ScrollTrigger); 
+    gsap.utils.toArray('section').forEach(section => { 
+        gsap.fromTo(section.querySelectorAll('.fade-item'), 
+            { opacity: 0, y: 50 }, 
+            { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, scrollTrigger: { trigger: section, start: "top 80%", end: "bottom 20%", toggleActions: "play none none reverse" } }
+        ); 
+    }); 
+}
+
+</script>

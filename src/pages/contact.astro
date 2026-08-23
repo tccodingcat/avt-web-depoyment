@@ -1,0 +1,235 @@
+---
+import Layout from '../Layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+   <style>
+        /* 地圖容器 */
+        .map-container iframe {
+            border-radius: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .map-container iframe:hover {
+            transform: scale(1.01);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* 社交圖標 */
+        .social-icon {
+            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+   </style>
+<Layout>
+    <Navbar />
+<!-- Hero 區塊 -->
+<section class="relative min-h-[45vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+    <div class="hero-bg grid-bg">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div class="data-stream" style="left: 15%; animation-delay: 0s;"></div>
+        <div class="data-stream" style="left: 85%; animation-delay: 1.5s;"></div>
+        <div class="absolute top-20 left-10 w-32 h-32 border border-cyan-400/20 rounded-full"></div>
+        <div class="absolute bottom-40 right-20 w-24 h-24 border border-purple-400/20 rotate-45"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto">
+        <div class="fade-item">
+            <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 border-b border-cyan-400/50 pb-1" data-i18n="hero_badge">聯繫我們</span>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-neutral-900 leading-[1.1] mt-6 mb-6 glow-text tech-font" data-i18n="hero_title">取得聯繫</h1>
+            <p class="text-neutral-600 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed" data-i18n="hero_subtitle">我們的團隊隨時為您提供專業諮詢與技術支持</p>
+        </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"><div class="w-[2px] h-12 bg-gradient-to-b from-cyan-400 to-transparent mx-auto"></div></div>
+</section>
+
+<!-- 主要聯絡資訊區塊 -->
+<section class="py-20 px-6 md:px-12 bg-white/30">
+    <div class="max-w-6xl mx-auto">
+        <!-- 聯絡方式卡片網格 -->
+        <div class="grid md:grid-cols-3 gap-8 mb-20">
+            <!-- 電話卡片 -->
+            <div class="fade-item contact-card bg-white rounded-2xl p-8 text-center shadow-sm neon-border tech-card-hover flow-border">
+                <div class="w-20 h-20 bg-black/5 rounded-full flex items-center justify-center mx-auto mb-5">
+                    <i class="fas fa-phone-alt text-3xl text-cyan-600"></i>
+                </div>
+                <h3 class="font-serif text-xl mb-3" data-i18n="contact_phone_title">電話</h3>
+                <a href="tel:+85292153554" class="text-neutral-600 text-lg hover:text-cyan-600 transition clickable block mb-2">+852 9215 3554</a>
+                <p class="text-sm text-neutral-400" data-i18n="office_hours">週一至週五 9:00-18:00</p>
+            </div>
+            
+            <!-- 電子郵件卡片 -->
+            <div class="fade-item contact-card bg-white rounded-2xl p-8 text-center shadow-sm neon-border tech-card-hover flow-border" style="transition-delay:0.1s">
+                <div class="w-20 h-20 bg-black/5 rounded-full flex items-center justify-center mx-auto mb-5">
+                    <i class="fas fa-envelope text-3xl text-cyan-600"></i>
+                </div>
+                <h3 class="font-serif text-xl mb-3" data-i18n="contact_email_title">電子郵件</h3>
+                <a href="mailto:chanhei@alphavision.tech" class="text-neutral-600 text-lg hover:text-cyan-600 transition clickable block mb-2">chanhei@alphavision.tech</a>
+                <a href="mailto:support@alphavision.tech" class="text-neutral-500 text-sm hover:text-cyan-600 transition clickable block" data-i18n="support_email">support@alphavision.tech</a>
+            </div>
+            
+            <!-- 社交媒體卡片 -->
+            <div class="fade-item contact-card bg-white rounded-2xl p-8 text-center shadow-sm neon-border tech-card-hover flow-border" style="transition-delay:0.2s">
+                <div class="w-20 h-20 bg-black/5 rounded-full flex items-center justify-center mx-auto mb-5">
+                    <i class="fas fa-share-alt text-3xl text-cyan-600"></i>
+                </div>
+                <h3 class="font-serif text-xl mb-4" data-i18n="social_title">追蹤我們</h3>
+                <div class="flex justify-center gap-6">
+                    <a href="#" class="social-icon w-12 h-12 bg-neutral-100 rounded-full flex items-center justify-center hover:bg-black transition-all duration-300 clickable">
+                        <i class="fab fa-facebook-f text-lg text-neutral-600 hover:text-white transition-colors"></i>
+                    </a>
+                    <a href="#" class="social-icon w-12 h-12 bg-neutral-100 rounded-full flex items-center justify-center hover:bg-black transition-all duration-300 clickable">
+                        <i class="fab fa-instagram text-lg text-neutral-600 hover:text-white transition-colors"></i>
+                    </a>
+                    <a href="#" class="social-icon w-12 h-12 bg-neutral-100 rounded-full flex items-center justify-center hover:bg-black transition-all duration-300 clickable">
+                        <i class="fab fa-linkedin-in text-lg text-neutral-600 hover:text-white transition-colors"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 公司地址與地圖區塊 -->
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+            <!-- 地址資訊 -->
+            <div class="fade-item" style="transition-delay:0.3s">
+                <div class="bg-white rounded-2xl p-8 shadow-sm contact-card neon-border tech-card-hover flow-border">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-xl text-cyan-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl mb-2" data-i18n="address_title">公司地址</h3>
+                            <p class="text-neutral-600 leading-relaxed" data-i18n="address_line">
+                                Unit 733, 7/F, Building 19W,<br/>
+                                No. 19 Science Park West Avenue,<br/>
+                                Hong Kong Science Park,<br/>
+                                Pak Shek Kok, N.T.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-clock text-xl text-cyan-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl mb-2" data-i18n="hours_title">辦公時間</h3>
+                            <p class="text-neutral-600" data-i18n="hours_text">週一至週五 9:00 - 18:00 (UTC+8)</p>
+                            <p class="text-neutral-500 text-sm mt-1" data-i18n="weekend_note">週末及公眾假期休息</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-globe text-xl text-cyan-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl mb-2" data-i18n="website_title">官方網站</h3>
+                            <a href="https://www.alphavision.tech" class="text-neutral-600 hover:text-cyan-600 transition clickable">www.alphavision.tech</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Google 地圖 -->
+            <div class="fade-item map-container" style="transition-delay:0.4s">
+                <div class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-lg transition-all duration-300 neon-border">
+                    <div class="flex items-center gap-2 mb-3">
+                        <i class="fas fa-location-dot text-cyan-500"></i>
+                        <span class="text-sm font-medium text-neutral-600" data-i18n="map_label">香港科學園 19W 大樓</span>
+                    </div>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.324449941697!2d114.20953587609107!3d22.42431597920645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404082a5f65b7d1%3A0x6c7b9f8e2a4b3c5d!2sBuilding%2019W!5e0!3m2!1szh-TW!2shk!4v1700000000000!5m2!1szh-TW!2shk" 
+                        width="100%" 
+                        height="320" 
+                        style="border:0; border-radius: 12px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Alpha Vision 公司位置 - 香港科學園 19W 大樓">
+                    </iframe>
+                    <div class="mt-3 text-right">
+                        <a href="https://maps.app.goo.gl/abqEdLy8KactXfnc8" target="_blank" rel="noopener noreferrer" class="text-xs text-neutral-500 hover:text-cyan-600 transition clickable inline-flex items-center gap-1" data-i18n="map_link">
+                            在 Google 地圖中開啟 <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 業務諮詢區塊 -->
+<section class="py-20 px-6 md:px-12 bg-white/40">
+    <div class="max-w-4xl mx-auto text-center">
+        <div class="fade-item">
+            <h2 class="font-serif text-3xl md:text-4xl text-neutral-900 mb-4 tech-font" data-i18n="business_title">業務諮詢</h2>
+            <p class="text-neutral-500 mb-8" data-i18n="business_desc">對於企業合作、產品採購或技術合作，請聯繫我們的業務團隊</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="mailto:business@alphavision.tech" class="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-semibold tracking-wide hover:bg-neutral-800 transition-all duration-300 clickable shadow-md neon-btn" data-i18n="business_email">
+                    <i class="fas fa-envelope"></i> business@alphavision.tech
+                </a>
+                <a href="tel:+85292153554" class="inline-flex items-center gap-2 border border-cyan-400/50 text-black px-6 py-3 rounded-full text-sm font-semibold hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 clickable neon-border" data-i18n="business_phone">
+                    <i class="fas fa-phone-alt"></i> +852 9215 3554
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 技術支持區塊 -->
+<section class="py-20 px-6 md:px-12 bg-white/30">
+    <div class="max-w-4xl mx-auto text-center">
+        <div class="fade-item" style="transition-delay:0.1s">
+            <h2 class="font-serif text-3xl md:text-4xl text-neutral-900 mb-4 tech-font" data-i18n="support_title">技術支持</h2>
+            <p class="text-neutral-500 mb-8" data-i18n="support_desc">需要技術支援或產品問題諮詢？我們的技術團隊將在24小時內回覆</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="mailto:support@alphavision.tech" class="inline-flex items-center gap-2 border border-cyan-400/50 text-black px-6 py-3 rounded-full text-sm font-semibold hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 clickable neon-border" data-i18n="support_email_btn">
+                    <i class="fas fa-life-ring"></i> support@alphavision.tech
+                </a>
+                <a href="#" class="inline-flex items-center gap-2 border border-cyan-400/50 text-black px-6 py-3 rounded-full text-sm font-semibold hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 clickable neon-border" data-i18n="online_chat">
+                    <i class="fas fa-comment-dots"></i> 在線客服
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 常見問題快速連結 -->
+<section class="py-16 px-6 md:px-12 bg-white/40">
+    <div class="max-w-4xl mx-auto">
+        <div class="fade-item text-center mb-10">
+            <h2 class="font-serif text-2xl md:text-3xl text-neutral-900 tech-font" data-i18n="faq_title">常見問題</h2>
+            <p class="text-neutral-500 mt-2" data-i18n="faq_subtitle">快速找到您需要的答案</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+            <a href="#" class="fade-item flex items-center justify-between p-4 bg-white rounded-xl hover:shadow-md transition-all duration-300 clickable neon-border" style="transition-delay:0.1s">
+                <span class="text-neutral-700" data-i18n="faq1">如何預約產品演示？</span>
+                <i class="fas fa-chevron-right text-cyan-400 text-sm"></i>
+            </a>
+            <a href="#" class="fade-item flex items-center justify-between p-4 bg-white rounded-xl hover:shadow-md transition-all duration-300 clickable neon-border" style="transition-delay:0.15s">
+                <span class="text-neutral-700" data-i18n="faq2">產品的技術規格與認證？</span>
+                <i class="fas fa-chevron-right text-cyan-400 text-sm"></i>
+            </a>
+            <a href="#" class="fade-item flex items-center justify-between p-4 bg-white rounded-xl hover:shadow-md transition-all duration-300 clickable neon-border" style="transition-delay:0.2s">
+                <span class="text-neutral-700" data-i18n="faq3">隱私保護機制如何運作？</span>
+                <i class="fas fa-chevron-right text-cyan-400 text-sm"></i>
+            </a>
+            <a href="#" class="fade-item flex items-center justify-between p-4 bg-white rounded-xl hover:shadow-md transition-all duration-300 clickable neon-border" style="transition-delay:0.25s">
+                <span class="text-neutral-700" data-i18n="faq4">企業合作方案與報價？</span>
+                <i class="fas fa-chevron-right text-cyan-400 text-sm"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<Footer />
+</Layout>
+
+
+<script type="module" src="/translation/pages/contact.js"></script>
+<script is:inline>
+const fadeObserver = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); fadeObserver.unobserve(e.target); } }), { threshold: 0.2 });
+document.querySelectorAll('.fade-item').forEach(el => fadeObserver.observe(el));
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') { gsap.registerPlugin(ScrollTrigger); gsap.utils.toArray('section').forEach(section => { gsap.fromTo(section.querySelectorAll('.fade-item'), { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, scrollTrigger: { trigger: section, start: "top 80%", end: "bottom 20%", toggleActions: "play none none reverse" } }); }); }
+const threeCanvas = document.getElementById('three-canvas'); if (threeCanvas && typeof THREE !== 'undefined') { const scene = new THREE.Scene(); const camera = new THREE.PerspectiveCamera(45, threeCanvas.clientWidth / threeCanvas.clientHeight, 0.1, 1000); const renderer = new THREE.WebGLRenderer({ canvas: threeCanvas, alpha: true }); const setSize = () => { const w = threeCanvas.parentElement.clientWidth, h = threeCanvas.parentElement.clientHeight; renderer.setSize(w, h); camera.aspect = w / h; camera.updateProjectionMatrix(); }; setSize(); window.addEventListener('resize', setSize); const particlesGeometry = new THREE.BufferGeometry(); const particlesCount = 800; const posArray = new Float32Array(particlesCount * 3); for (let i = 0; i < particlesCount * 3; i += 3) { posArray[i] = (Math.random() - 0.5) * 20; posArray[i+1] = (Math.random() - 0.5) * 12; posArray[i+2] = (Math.random() - 0.5) * 15 - 5; } particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3)); const particlesMaterial = new THREE.PointsMaterial({ color: 0xccccdd, size: 0.08, transparent: true, opacity: 0.5, blending: THREE.AdditiveBlending }); const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial); scene.add(particlesMesh); camera.position.z = 12; camera.position.y = 1; let time = 0; function animate() { requestAnimationFrame(animate); time += 0.002; particlesMesh.rotation.y = time * 0.2; particlesMesh.rotation.x = Math.sin(time * 0.1) * 0.2; renderer.render(scene, camera); } animate(); }
+
+</script>

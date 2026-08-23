@@ -1,0 +1,182 @@
+---
+import Layout from '../Layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+    <style>
+        /* 符號圖標容器 */
+        .icon-wrapper {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, rgba(0,150,255,0.1), rgba(0,255,204,0.05));
+            border-radius: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem auto;
+            border: 1px solid rgba(0,150,255,0.3);
+            transition: all 0.3s ease;
+        }
+        .icon-wrapper:hover {
+            transform: scale(1.05);
+            border-color: rgba(0,150,255,0.6);
+            box-shadow: 0 0 20px rgba(0,150,255,0.2);
+        }
+        .icon-wrapper i {
+            font-size: 3rem;
+            color: #00aaff;
+        }
+        
+</style>
+
+<Layout>
+    <Navbar />
+
+<!-- Hero 區塊 -->
+<section class="relative min-h-[40vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+    <div class="hero-bg grid-bg">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div class="data-stream" style="left: 15%; animation-delay: 0s;"></div>
+        <div class="data-stream" style="left: 85%; animation-delay: 1.5s;"></div>
+        <div class="absolute top-20 left-10 w-32 h-32 border border-cyan-400/20 rounded-full"></div>
+        <div class="absolute bottom-40 right-20 w-24 h-24 border border-purple-400/20 rotate-45"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto">
+        <div class="fade-item">
+            <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 border-b border-cyan-400/50 pb-1" data-i18n="hero_badge">核心人物</span>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-neutral-900 leading-[1.1] mt-6 mb-6 glow-text tech-font" data-i18n="hero_title">管理團隊</h1>
+            <p class="text-neutral-600 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed" data-i18n="hero_subtitle">以專業與熱情，引領 Alpha Vision 邁向智慧照護的未來</p>
+        </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"><div class="w-[2px] h-12 bg-gradient-to-b from-cyan-400 to-transparent mx-auto"></div></div>
+</section>
+
+<!-- 團隊介紹區塊 -->
+<section class="py-24 px-6 md:px-12 bg-white/30">
+    <div class="max-w-7xl mx-auto">
+        <!-- 執行長 -->
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-24">
+            <div class="order-2 md:order-1">
+                <div class="fade-item">
+                    <span class="text-sm font-mono text-cyan-500 tracking-wider" data-i18n="ceo_label">FOUNDER & CEO</span>
+                    <h2 class="font-serif text-4xl md:text-5xl mt-4 mb-6 text-neutral-900 tech-font" data-i18n="ceo_name">Chan Hei</h2>
+                    <div class="space-y-4 text-neutral-600 leading-relaxed">
+                        <p data-i18n="ceo_desc1">香港理工大學電機工程系傑出校友，擁有二十年市場動態與供應鏈管理經驗。在創立 Alpha Vision 前，曾成功創辦 Pioneer Technology Ltd，帶領公司成為創新與奉獻精神的典範。</p>
+                        <p data-i18n="ceo_desc2">作為創辦人兼執行長，Chan Hei 致力於將先進 AI 技術應用於長者照護領域，為全球老齡化社會帶來實質改變。在他的領導下，Alpha Vision 已發展成為智慧照護領域的創新先驅。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 md:order-2">
+                <div class="fade-item" style="transition-delay:0.1s">
+                    <div class="icon-wrapper mx-auto">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="text-center mt-4">
+                        <p class="text-sm text-cyan-400/70 font-mono">✦ LEADERSHIP ✦</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 營運長 -->
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-24">
+            <div class="order-1 md:order-1">
+                <div class="fade-item" style="transition-delay:0.2s">
+                    <div class="icon-wrapper mx-auto">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="text-center mt-4">
+                        <p class="text-sm text-cyan-400/70 font-mono">✦ OPERATIONS ✦</p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-2 md:order-2">
+                <div class="fade-item" style="transition-delay:0.3s">
+                    <span class="text-sm font-mono text-cyan-500 tracking-wider" data-i18n="coo_label">CHIEF OPERATING OFFICER</span>
+                    <h2 class="font-serif text-4xl md:text-5xl mt-4 mb-6 text-neutral-900 tech-font" data-i18n="coo_name">Tan Hwee Kuang</h2>
+                    <div class="space-y-4 text-neutral-600 leading-relaxed">
+                        <p data-i18n="coo_desc1">馬來西亞華裔，畢業於奧克拉荷馬大學電子與計算機工程系。擁有30年電子製造與營運管理經驗，曾擔任多家國際知名企業營運長。</p>
+                        <p data-i18n="coo_desc2">曾任職於 Radisys (NASDAQ上市工業電腦公司)、Greenvolts (太陽能系統公司) 及 Amazon，在跨國企業營運管理、供應鏈優化方面擁有豐富實戰經驗。加入 Alpha Vision 後，致力於打造高效、可持續的營運體系。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 技術長 -->
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <div class="fade-item" style="transition-delay:0.4s">
+                    <span class="text-sm font-mono text-cyan-500 tracking-wider" data-i18n="cto_label">CHIEF TECHNOLOGY OFFICER</span>
+                    <h2 class="font-serif text-4xl md:text-5xl mt-4 mb-6 text-neutral-900 tech-font" data-i18n="cto_name">Kwan Kai Cheong</h2>
+                    <div class="space-y-4 text-neutral-600 leading-relaxed">
+                        <p data-i18n="cto_desc1">香港理工大學博士畢業，專精於計算機視覺與影像處理領域。擁有超過15年相機系統優化、數位影像處理算法及計算機視覺系統經驗。</p>
+                        <p data-i18n="cto_desc2">曾參與香港科技應用研究院超過10項重點項目，在光電檢測控制平台與智慧相機系統設計方面經驗豐富，擁有超過20項影像系統及關鍵技術發明專利。領導 Alpha Vision 技術團隊，持續推動核心技術創新。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 md:order-2">
+                <div class="fade-item" style="transition-delay:0.5s">
+                    <div class="icon-wrapper mx-auto">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="text-center mt-4">
+                        <p class="text-sm text-cyan-400/70 font-mono">✦ TECHNOLOGY ✦</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 核心價值區塊 -->
+<section class="py-24 px-6 md:px-12 bg-white/40">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <div class="fade-item">
+                <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 border-b border-cyan-400/50 pb-1" data-i18n="values_badge">我們的理念</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-6 text-neutral-900 tech-font" data-i18n="values_title">領導力與願景</h2>
+                <p class="text-neutral-500 max-w-2xl mx-auto mt-5" data-i18n="values_subtitle">以創新科技守護長者安全，以專業團隊引領未來</p>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="fade-item bg-white rounded-2xl p-8 text-center shadow-sm neon-border tech-card-hover">
+                <div class="w-16 h-16 bg-black/5 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-lightbulb text-2xl text-cyan-600"></i></div>
+                <h3 class="font-serif text-xl mb-3" data-i18n="value1_title">創新驅動</h3>
+                <p class="text-neutral-500 text-sm" data-i18n="value1_desc">持續投入研發，以最先進的 AI 技術解決長者照護的實際挑戰。</p>
+            </div>
+            <div class="fade-item bg-white rounded-2xl p-8 text-center shadow-sm neon-border tech-card-hover" style="transition-delay:0.1s">
+                <div class="w-16 h-16 bg-black/5 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-heart text-2xl text-cyan-600"></i></div>
+                <h3 class="font-serif text-xl mb-3" data-i18n="value2_title">以人為本</h3>
+                <p class="text-neutral-500 text-sm" data-i18n="value2_desc">尊重隱私、關懷生命，讓科技服務於人類的真正需求。</p>
+            </div>
+            <div class="fade-item bg-white rounded-2xl p-8 text-center shadow-sm neon-border tech-card-hover" style="transition-delay:0.2s">
+                <div class="w-16 h-16 bg-black/5 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-globe text-2xl text-cyan-600"></i></div>
+                <h3 class="font-serif text-xl mb-3" data-i18n="value3_title">全球視野</h3>
+                <p class="text-neutral-500 text-sm" data-i18n="value3_desc">立足香港，服務全球，為老齡化社會提供智慧解決方案。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 加入團隊 CTA 區塊 -->
+<section class="py-20 px-6 md:px-12 bg-neutral-900 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+        <div class="fade-item">
+            <h2 class="font-serif text-3xl md:text-4xl mb-4" data-i18n="cta_title">加入我們的團隊</h2>
+            <p class="text-neutral-300 mb-8" data-i18n="cta_desc">我們正在尋找熱愛創新、勇於挑戰的夥伴，共同塑造智慧照護的未來。</p>
+            <a href="/contact" class="inline-block bg-white text-black px-8 py-3 rounded-full text-sm font-semibold hover:bg-neutral-200 transition-all duration-300 clickable neon-btn" data-i18n="cta_btn">查看職缺 →</a>
+        </div>
+    </div>
+</section>
+<Footer />
+</Layout>
+
+<script type="module" src="/translation/pages/team.js"></script>
+<script is:inline>
+const fadeObserver = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); fadeObserver.unobserve(e.target); } }), { threshold: 0.2 });
+document.querySelectorAll('.fade-item').forEach(el => fadeObserver.observe(el));
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') { gsap.registerPlugin(ScrollTrigger); gsap.utils.toArray('section').forEach(section => { gsap.fromTo(section.querySelectorAll('.fade-item'), { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, scrollTrigger: { trigger: section, start: "top 80%", end: "bottom 20%", toggleActions: "play none none reverse" } }); }); }
+const threeCanvas = document.getElementById('three-canvas'); if (threeCanvas && typeof THREE !== 'undefined') { const scene = new THREE.Scene(); const camera = new THREE.PerspectiveCamera(45, threeCanvas.clientWidth / threeCanvas.clientHeight, 0.1, 1000); const renderer = new THREE.WebGLRenderer({ canvas: threeCanvas, alpha: true }); const setSize = () => { const w = threeCanvas.parentElement.clientWidth, h = threeCanvas.parentElement.clientHeight; renderer.setSize(w, h); camera.aspect = w / h; camera.updateProjectionMatrix(); }; setSize(); window.addEventListener('resize', setSize); const particlesGeometry = new THREE.BufferGeometry(); const particlesCount = 800; const posArray = new Float32Array(particlesCount * 3); for (let i = 0; i < particlesCount * 3; i += 3) { posArray[i] = (Math.random() - 0.5) * 20; posArray[i+1] = (Math.random() - 0.5) * 12; posArray[i+2] = (Math.random() - 0.5) * 15 - 5; } particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3)); const particlesMaterial = new THREE.PointsMaterial({ color: 0xccccdd, size: 0.08, transparent: true, opacity: 0.5, blending: THREE.AdditiveBlending }); const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial); scene.add(particlesMesh); camera.position.z = 12; camera.position.y = 1; let time = 0; function animate() { requestAnimationFrame(animate); time += 0.002; particlesMesh.rotation.y = time * 0.2; particlesMesh.rotation.x = Math.sin(time * 0.1) * 0.2; renderer.render(scene, camera); } animate(); }
+
+</script>

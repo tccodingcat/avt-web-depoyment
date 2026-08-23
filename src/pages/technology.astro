@@ -1,0 +1,244 @@
+---
+import Layout from '../Layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+    <style>
+        /* 圖片容器 */
+        .img-container { overflow: hidden; border-radius: 1.5rem; box-shadow: 0 15px 35px -15px rgba(0,0,0,0.15); transition: all 0.4s ease; }
+        .img-container:hover { transform: scale(1.02); box-shadow: 0 25px 45px -15px rgba(0,0,0,0.25); }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .img-container:hover img { transform: scale(1.05); }
+    </style>
+<Layout>
+    <Navbar />
+
+<!-- Hero 區塊 -->
+<section class="relative min-h-[45vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+    <div class="hero-bg grid-bg">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 left-10 w-32 h-32 border border-cyan-400/20 rounded-full"></div>
+        <div class="absolute bottom-40 right-20 w-24 h-24 border border-purple-400/20 rotate-45"></div>
+        <div class="data-stream" style="left: 15%; animation-delay: 0s;"></div>
+        <div class="data-stream" style="left: 85%; animation-delay: 1.5s;"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto">
+        <div class="fade-item">
+            <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 border-b border-cyan-400/50 pb-1" data-i18n="hero_badge">核心技術</span>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-neutral-900 leading-[1.1] mt-6 mb-6 glow-text tech-font" data-i18n="hero_title">人體智慧解析</h1>
+            <p class="text-neutral-600 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed" data-i18n="hero_subtitle">骨骼偵測、動作識別與人群軌跡，精準如影隨形</p>
+        </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"><div class="w-[2px] h-12 bg-gradient-to-b from-cyan-400 to-transparent mx-auto"></div></div>
+</section>
+
+<!-- 技術概述區塊 -->
+<section class="py-24 px-6 md:px-12 bg-white/30">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="fade-item">
+                <span class="text-sm font-mono text-neutral-500 tracking-wider" data-i18n="overview_label">技術概述</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-4 mb-6 text-neutral-900 tech-font" data-i18n="overview_title">讓機器理解人類行為</h2>
+                <p class="text-neutral-600 leading-relaxed mb-6" data-i18n="overview_text1">Alpha Vision 的技術核心在於讓機器能夠精準理解人類的行為與意圖。透過深度學習與計算機視覺的結合，我們開發出業界領先的人體骨骼偵測、動作識別與行為分析系統。</p>
+                <p class="text-neutral-600 leading-relaxed" data-i18n="overview_text2">我們的技術不僅能夠實時追蹤人體關鍵點，更能理解複雜的動作序列，從簡單的跌倒檢測到複雜的行為模式分析，為智慧照護、人機互動等領域提供強大的技術支撐。</p>
+            </div>
+            <div class="fade-item" style="transition-delay:0.1s">
+                <div class="img-container">
+                    <img src="https://picsum.photos/id/1/600/400" alt="AI Technology" onerror="this.src='https://placehold.co/600x400/e9e6e2/8b7355?text=AI+Technology'">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 核心能力區塊 -->
+<section class="py-24 px-6 md:px-12 bg-white/40">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <div class="fade-item">
+                <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 border-b border-cyan-400/50 pb-1" data-i18n="capabilities_badge">核心能力</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-6 text-neutral-900 tech-font" data-i18n="capabilities_title">引領行業的技術實力</h2>
+                <p class="text-neutral-500 max-w-2xl mx-auto mt-5" data-i18n="capabilities_subtitle">從骨骼偵測到行為理解，我們提供完整的技術解決方案</p>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="fade-item bg-white rounded-2xl p-8 text-center tech-card neon-border energy-bar tech-card-hover flow-border">
+                <div class="w-20 h-20 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-5"><i class="fas fa-person-walking-arrow-right text-3xl text-cyan-600"></i></div>
+                <h3 class="font-serif text-2xl mb-3" data-i18n="cap1_title">骨骼偵測</h3>
+                <p class="text-neutral-500 text-sm" data-i18n="cap1_desc">即時追蹤頭部、肩部、肘部、手腕、髖部、膝蓋、腳踝等17個關鍵點，精確捕捉人體姿態。</p>
+                <div class="mt-4 flex justify-center gap-2"><span class="text-xs bg-black/5 px-2 py-1 rounded-full">17個關鍵點</span><span class="text-xs bg-black/5 px-2 py-1 rounded-full">實時追蹤</span><span class="text-xs bg-black/5 px-2 py-1 rounded-full">高精度</span></div>
+            </div>
+            <div class="fade-item bg-white rounded-2xl p-8 text-center tech-card neon-border energy-bar tech-card-hover flow-border" style="transition-delay:0.1s">
+                <div class="w-20 h-20 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-5"><i class="fas fa-waveform text-3xl text-cyan-600"></i></div>
+                <h3 class="font-serif text-2xl mb-3" data-i18n="cap2_title">動作識別</h3>
+                <p class="text-neutral-500 text-sm" data-i18n="cap2_desc">識別超過30種預定義動作，並支援自定義動作訓練，滿足不同場景需求。</p>
+                <div class="mt-4 flex justify-center gap-2"><span class="text-xs bg-black/5 px-2 py-1 rounded-full">30+動作</span><span class="text-xs bg-black/5 px-2 py-1 rounded-full">自定義訓練</span><span class="text-xs bg-black/5 px-2 py-1 rounded-full">毫秒級響應</span></div>
+            </div>
+            <div class="fade-item bg-white rounded-2xl p-8 text-center tech-card neon-border energy-bar tech-card-hover flow-border" style="transition-delay:0.2s">
+                <div class="w-20 h-20 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-5"><i class="fas fa-chart-line text-3xl text-cyan-600"></i></div>
+                <h3 class="font-serif text-2xl mb-3" data-i18n="cap3_title">行為分析</h3>
+                <p class="text-neutral-500 text-sm" data-i18n="cap3_desc">分析日常行為模式，識別異常行為變化，預測潛在風險，提供預警。</p>
+                <div class="mt-4 flex justify-center gap-2"><span class="text-xs bg-black/5 px-2 py-1 rounded-full">模式學習</span><span class="text-xs bg-black/5 px-2 py-1 rounded-full">異常檢測</span><span class="text-xs bg-black/5 px-2 py-1 rounded-full">風險預測</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 神經形態視覺技術區塊 -->
+<section class="py-24 px-6 md:px-12 bg-white/30">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="fade-item order-2 md:order-1">
+                <div class="bg-white rounded-3xl p-8 shadow-sm tech-card neon-border">
+                    <div class="inline-block px-4 py-1 bg-black/5 rounded-full text-sm font-mono mb-6" data-i18n="neuromorphic_badge">專利技術</div>
+                    <h3 class="font-serif text-3xl mb-4" data-i18n="neuromorphic_title">神經形態視覺</h3>
+                    <p class="text-neutral-600 leading-relaxed mb-4" data-i18n="neuromorphic_desc1">利用動態視覺感測器的力量，專注於核心資訊而不受色彩和紋理的干擾。這種仿生視覺技術模擬人類視網膜的工作原理，只對場景中的變化做出反應，大幅降低數據處理量。</p>
+                    <p class="text-neutral-600 leading-relaxed" data-i18n="neuromorphic_desc2">相比傳統視覺系統，神經形態視覺具備更低的延遲、更高的動態範圍和更低的功耗，特別適合於邊緣運算場景。</p>
+                    <div class="mt-6 flex gap-3"><span class="text-xs bg-black/5 px-3 py-1 rounded-full">低延遲</span><span class="text-xs bg-black/5 px-3 py-1 rounded-full">低功耗</span><span class="text-xs bg-black/5 px-3 py-1 rounded-full">高動態範圍</span></div>
+                </div>
+            </div>
+            <div class="fade-item order-1 md:order-2" style="transition-delay:0.1s">
+                <div class="img-container">
+                    <img src="https://picsum.photos/id/26/600/400" alt="Neuromorphic Vision" onerror="this.src='https://placehold.co/600x400/e9e6e2/8b7355?text=Neuromorphic+Vision'">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 雙模態動態視覺感測器區塊 -->
+<section class="py-24 px-6 md:px-12 bg-white/40">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="fade-item order-2 md:order-2">
+                <div class="bg-white rounded-3xl p-8 shadow-sm tech-card neon-border">
+                    <div class="inline-block px-4 py-1 bg-black/5 rounded-full text-sm font-mono mb-6" data-i18n="dm_badge">專利技術</div>
+                    <h3 class="font-serif text-3xl mb-4" data-i18n="dm_title">雙模態動態視覺感測器</h3>
+                    <p class="text-neutral-600 leading-relaxed mb-4" data-i18n="dm_desc1">我們的專利技術——雙模態動態視覺感測器，能夠在各種光照條件下實現穩定的物體偵測。無論是強光、暗光還是動態場景，都能保持卓越的成像品質。</p>
+                    <p class="text-neutral-600 leading-relaxed" data-i18n="dm_desc2">同時，這項技術從根本上保護用戶隱私——系統僅提取和分析人體骨骼信息，不傳輸、不儲存任何可識別的圖像數據。</p>
+                    <div class="mt-6 flex gap-3"><span class="text-xs bg-black/5 px-3 py-1 rounded-full">全天候運作</span><span class="text-xs bg-black/5 px-3 py-1 rounded-full">隱私保護</span><span class="text-xs bg-black/5 px-3 py-1 rounded-full">專利技術</span></div>
+                </div>
+            </div>
+            <div class="fade-item order-1 md:order-1" style="transition-delay:0.1s">
+                <div class="img-container">
+                    <img src="https://picsum.photos/id/0/600/400" alt="Dual-Mode Dynamic Vision Sensor" onerror="this.src='https://placehold.co/600x400/e9e6e2/8b7355?text=DM-DVS'">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 技術架構區塊 -->
+<section class="py-24 px-6 md:px-12 bg-white/30">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <div class="fade-item">
+                <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 border-b border-cyan-400/50 pb-1" data-i18n="architecture_badge">技術架構</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-6 text-neutral-900 tech-font" data-i18n="architecture_title">端到端技術平台</h2>
+                <p class="text-neutral-500 max-w-2xl mx-auto mt-5" data-i18n="architecture_subtitle">從邊緣運算到雲端分析，完整的技術生態系統</p>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="fade-item text-center p-8 bg-white rounded-2xl shadow-sm feature-card neon-border tech-card-hover">
+                <i class="fas fa-microchip text-3xl text-cyan-600 mb-3"></i>
+                <h3 class="font-serif text-xl mb-2" data-i18n="arch1_title">邊緣運算</h3>
+                <p class="text-neutral-500 text-sm" data-i18n="arch1_desc">本地處理影像數據，毫秒級響應，保護隱私同時降低網絡依賴</p>
+            </div>
+            <div class="fade-item text-center p-8 bg-white rounded-2xl shadow-sm feature-card neon-border tech-card-hover" style="transition-delay:0.1s">
+                <i class="fas fa-brain text-3xl text-cyan-600 mb-3"></i>
+                <h3 class="font-serif text-xl mb-2" data-i18n="arch2_title">AI推理引擎</h3>
+                <p class="text-neutral-500 text-sm" data-i18n="arch2_desc">深度學習模型持續優化，支援多種硬體平台，實現高效能推理</p>
+            </div>
+            <div class="fade-item text-center p-8 bg-white rounded-2xl shadow-sm feature-card neon-border tech-card-hover" style="transition-delay:0.2s">
+                <i class="fas fa-cloud text-3xl text-cyan-600 mb-3"></i>
+                <h3 class="font-serif text-xl mb-2" data-i18n="arch3_title">雲端分析平台</h3>
+                <p class="text-neutral-500 text-sm" data-i18n="arch3_desc">大數據分析、行為模式學習、遠程監控與報表生成</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 技術應用區塊 -->
+<section class="py-24 px-6 md:px-12 bg-white/40">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <div class="fade-item">
+                <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 border-b border-cyan-400/50 pb-1" data-i18n="applications_badge">技術應用</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-6 text-neutral-900 tech-font" data-i18n="applications_title">賦能多元場景</h2>
+                <p class="text-neutral-500 max-w-2xl mx-auto mt-5" data-i18n="applications_subtitle">同一技術平台，服務不同行業需求</p>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="fade-item bg-white rounded-xl p-5 text-center tech-card-hover neon-border"><i class="fas fa-hospital-user text-2xl text-cyan-600 mb-2"></i><h4 class="font-semibold mb-1" data-i18n="app1_title">智慧醫療</h4><p class="text-xs text-neutral-500" data-i18n="app1_desc">患者監護、康復訓練</p></div>
+            <div class="fade-item bg-white rounded-xl p-5 text-center tech-card-hover neon-border" style="transition-delay:0.1s"><i class="fas fa-home text-2xl text-cyan-600 mb-2"></i><h4 class="font-semibold mb-1" data-i18n="app2_title">智慧居家</h4><p class="text-xs text-neutral-500" data-i18n="app2_desc">長者照護、跌倒檢測</p></div>
+            <div class="fade-item bg-white rounded-xl p-5 text-center tech-card-hover neon-border" style="transition-delay:0.2s"><i class="fas fa-robot text-2xl text-cyan-600 mb-2"></i><h4 class="font-semibold mb-1" data-i18n="app3_title">人機協作</h4><p class="text-xs text-neutral-500" data-i18n="app3_desc">手勢控制、體感交互</p></div>
+            <div class="fade-item bg-white rounded-xl p-5 text-center tech-card-hover neon-border" style="transition-delay:0.3s"><i class="fas fa-chart-simple text-2xl text-cyan-600 mb-2"></i><h4 class="font-semibold mb-1" data-i18n="app4_title">智慧零售</h4><p class="text-xs text-neutral-500" data-i18n="app4_desc">人流分析、顧客行為</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- 技術數據區塊 -->
+<section class="py-24 px-6 md:px-12 bg-white/30">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="fade-item text-center p-6 bg-white rounded-2xl shadow-sm"><div class="stat-number text-4xl md:text-5xl font-serif text-neutral-900 mb-2">17</div><p class="text-neutral-500" data-i18n="data1">骨骼關鍵點</p></div>
+            <div class="fade-item text-center p-6 bg-white rounded-2xl shadow-sm" style="transition-delay:0.1s"><div class="stat-number text-4xl md:text-5xl font-serif text-neutral-900 mb-2">&lt;50ms</div><p class="text-neutral-500" data-i18n="data2">推理延遲</p></div>
+            <div class="fade-item text-center p-6 bg-white rounded-2xl shadow-sm" style="transition-delay:0.2s"><div class="stat-number text-4xl md:text-5xl font-serif text-neutral-900 mb-2">99.2%</div><p class="text-neutral-500" data-i18n="data3">檢測準確率</p></div>
+            <div class="fade-item text-center p-6 bg-white rounded-2xl shadow-sm" style="transition-delay:0.3s"><div class="stat-number text-4xl md:text-5xl font-serif text-neutral-900 mb-2">30+</div><p class="text-neutral-500" data-i18n="data4">預定義動作</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- 研發實力區塊 -->
+<section class="py-24 px-6 md:px-12 bg-white/40">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="fade-item">
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-center gap-4 mb-6"><i class="fas fa-flask text-3xl text-cyan-600"></i><h3 class="font-serif text-2xl" data-i18n="rd_title">持續創新</h3></div>
+                    <p class="text-neutral-600 leading-relaxed mb-4" data-i18n="rd_text1">我們的研發團隊由計算機視覺、深度學習領域的專家組成，持續投入技術創新，已獲得超過20項發明專利。</p>
+                    <p class="text-neutral-600 leading-relaxed" data-i18n="rd_text2">與香港理工大學、香港科技應用研究院等頂尖學術機構保持緊密合作，共同推動AI技術在智慧照護領域的應用。</p>
+                </div>
+            </div>
+            <div class="fade-item" style="transition-delay:0.1s">
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-center gap-4 mb-6"><i class="fas fa-chart-line text-3xl text-cyan-600"></i><h3 class="font-serif text-2xl" data-i18n="roadmap_title">技術路線圖</h3></div>
+                    <div class="space-y-4">
+                        <div><div class="flex justify-between text-sm mb-1"><span class="font-medium" data-i18n="roadmap1_year">2024</span><span data-i18n="roadmap1_desc">核心技術驗證</span></div><div class="w-full bg-neutral-100 rounded-full h-1.5"><div class="bg-cyan-600 h-1.5 rounded-full w-full"></div></div></div>
+                        <div><div class="flex justify-between text-sm mb-1"><span class="font-medium" data-i18n="roadmap2_year">2025</span><span data-i18n="roadmap2_desc">產品化落地</span></div><div class="w-full bg-neutral-100 rounded-full h-1.5"><div class="bg-cyan-600 h-1.5 rounded-full w-full"></div></div></div>
+                        <div><div class="flex justify-between text-sm mb-1"><span class="font-medium" data-i18n="roadmap3_year">2026</span><span data-i18n="roadmap3_desc">規模化應用</span></div><div class="w-full bg-neutral-100 rounded-full h-1.5"><div class="bg-cyan-600 h-1.5 rounded-full w-2/3"></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA 區塊 -->
+<section class="py-20 px-6 md:px-12 bg-neutral-900 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+        <div class="fade-item">
+            <h2 class="font-serif text-3xl md:text-4xl mb-4" data-i18n="cta_title">探索技術應用</h2>
+            <p class="text-neutral-300 mb-8" data-i18n="cta_desc">深入了解我們的技術如何為您的業務創造價值</p>
+            <a href="/contact" class="inline-block bg-white text-black px-8 py-3 rounded-full text-sm font-semibold hover:bg-neutral-200 transition-all duration-300 clickable neon-btn" data-i18n="cta_btn">預約技術諮詢 →</a>
+        </div>
+    </div>
+</section>
+<Footer />
+</Layout>
+<script type="module" src="/translation/pages/technology.js"></script>
+<script is:inline>
+const fadeObserver = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); fadeObserver.unobserve(e.target); } }), { threshold: 0.2 });
+document.querySelectorAll('.fade-item').forEach(el => fadeObserver.observe(el));
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') { 
+    gsap.registerPlugin(ScrollTrigger); 
+    gsap.utils.toArray('section').forEach(section => { 
+        gsap.fromTo(section.querySelectorAll('.fade-item'), 
+            { opacity: 0, y: 50 }, 
+            { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, scrollTrigger: { trigger: section, start: "top 80%", end: "bottom 20%", toggleActions: "play none none reverse" } }
+        ); 
+    }); 
+}
+
+</script>

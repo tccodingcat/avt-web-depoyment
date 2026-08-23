@@ -1,0 +1,54 @@
+<header class="fixed top-0 left-0 w-full z-50 navbar-dark py-4 px-6 md:px-12 flex justify-between items-center">
+    <a href="/" class="flex items-center gap-3 clickable group">
+        <img src="/images/logo.png" alt="Alpha Vision Logo" class="logo-img h-10 w-auto" onerror="this.style.display='none'">
+        <span class="font-serif font-semibold text-xl tracking-tighter text-white">ALPHA VISION</span>
+    </a>
+    <div class="flex items-center gap-6">
+        <nav class="hidden md:flex space-x-8 text-white text-sm font-medium tracking-wide">
+            <a href="/" class="nav-link hover:text-cyan-400 transition-all duration-300 relative group px-1" data-i18n="nav_home">首頁<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
+            <div class="relative group">
+                <a href="#" class="nav-link hover:text-cyan-400 transition-all duration-300 flex items-center gap-1 px-1 relative group" data-i18n="nav_products">產品 <i class="fas fa-chevron-down text-xs"></i><span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
+                <div class="dropdown-menu absolute top-8 left-0 bg-black/90 backdrop-blur-xl rounded-xl shadow-2xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 min-w-[160px] border border-cyan-500/30">
+                    <a href="/smartcare" class="block px-5 py-3 text-sm text-white hover:bg-cyan-500/20 hover:text-cyan-300 transition clickable" data-i18n="product_smartcare">AI</a>
+                    <a href="/robotics" class="block px-5 py-3 text-sm text-white hover:bg-cyan-500/20 hover:text-cyan-300 transition clickable" data-i18n="product_robotics">機器人解決方案</a>
+                    <a href="/hmi" class="block px-5 py-3 text-sm text-white hover:bg-cyan-500/20 hover:text-cyan-300 transition clickable" data-i18n="product_hmi">人機互動</a>
+                </div>
+            </div>
+            <a href="/technology" class="nav-link hover:text-cyan-400 transition-all duration-300 relative group px-1" data-i18n="nav_technology">技術<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
+            <a href="/about" class="nav-link hover:text-cyan-400 transition-all duration-300 relative group px-1" data-i18n="nav_about">關於我們<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
+            <a href="/team" class="nav-link hover:text-cyan-400 transition-all duration-300 relative group px-1" data-i18n="nav_team">管理團隊<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
+            <a href="/contact" class="nav-link hover:text-cyan-400 transition-all duration-300 relative group px-1" data-i18n="nav_contact">聯絡<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
+        </nav>
+        <div class="relative group">
+            <button class="language-btn clickable flex items-center gap-1"><i class="fas fa-globe text-xs"></i> <span id="currentLangDisplay">中文</span></button>
+            <div class="absolute top-10 right-0 bg-black/90 backdrop-blur-xl rounded-xl shadow-2xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 min-w-[100px] border border-cyan-500/30">
+                <button class="lang-option block w-full px-4 py-2 text-left text-sm text-white hover:bg-cyan-500/20 hover:text-cyan-300 transition clickable" data-lang="zh" onclick="changeLanguage('zh')">繁體中文</button>
+                <button class="lang-option block w-full px-4 py-2 text-left text-sm text-white hover:bg-cyan-500/20 hover:text-cyan-300 transition clickable" data-lang="en" onclick="changeLanguage('en')">English</button>
+                <button class="lang-option block w-full px-4 py-2 text-left text-sm text-white hover:bg-cyan-500/20 hover:text-cyan-300 transition clickable" data-lang="ja" onclick="changeLanguage('ja')">日本語</button>
+                <button class="lang-option block w-full px-4 py-2 text-left text-sm text-white hover:bg-cyan-500/20 hover:text-cyan-300 transition clickable" data-lang="ko" onclick="changeLanguage('ko')">한국어</button>
+            </div>
+        </div>
+        <a href="/contact" class="text-white text-sm border border-cyan-400/50 px-5 py-2 rounded-full hover:bg-cyan-500/20 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 clickable neon-btn" data-i18n="nav_demo">預約演示</a>
+        <div class="md:hidden relative">
+            <input id="mobile-menu-toggle" type="checkbox" class="peer hidden" />
+            <label for="mobile-menu-toggle" class="flex h-11 min-w-[44px] items-center justify-center rounded-full border border-cyan-400/40 bg-white/5 text-white hover:bg-white/10 transition clickable">
+                <span class="sr-only">切換導覽選單</span>
+                <i class="fas fa-bars text-lg"></i>
+            </label>
+            <div class="absolute right-0 top-full mt-3 w-[calc(100vw-2rem)] max-w-[320px] rounded-3xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 shadow-2xl opacity-0 scale-95 transform transition-all duration-300 origin-top-right pointer-events-none peer-checked:opacity-100 peer-checked:scale-100 peer-checked:pointer-events-auto z-40">
+                <nav class="flex flex-col gap-1 px-4 py-4 text-white text-sm">
+                    <a href="/" class="block rounded-2xl px-4 py-3 hover:bg-cyan-500/15 transition clickable" data-i18n="nav_home">首頁</a>
+                    <div class="rounded-2xl border border-cyan-500/20 bg-white/5 p-3">
+                        <a href="/smartcare" class="block rounded-xl px-3 py-2 text-sm text-white hover:bg-cyan-500/15 transition clickable" data-i18n="product_smartcare">AI</a>
+                        <a href="/robotics" class="block rounded-xl px-3 py-2 text-sm text-white hover:bg-cyan-500/15 transition clickable" data-i18n="product_robotics">機器人解決方案</a>
+                        <a href="/hmi" class="block rounded-xl px-3 py-2 text-sm text-white hover:bg-cyan-500/15 transition clickable" data-i18n="product_hmi">人機互動</a>
+                    </div>
+                    <a href="/technology" class="block rounded-2xl px-4 py-3 hover:bg-cyan-500/15 transition clickable" data-i18n="nav_technology">技術</a>
+                    <a href="/about" class="block rounded-2xl px-4 py-3 hover:bg-cyan-500/15 transition clickable" data-i18n="nav_about">關於我們</a>
+                    <a href="/team" class="block rounded-2xl px-4 py-3 hover:bg-cyan-500/15 transition clickable" data-i18n="nav_team">管理團隊</a>
+                    <a href="/contact" class="block rounded-2xl px-4 py-3 hover:bg-cyan-500/15 transition clickable" data-i18n="nav_contact">聯絡</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
